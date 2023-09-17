@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnVoltar = new Button();
             button5 = new Button();
             button4 = new Button();
             button3 = new Button();
@@ -39,6 +40,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnVoltar);
             groupBox1.Controls.Add(button5);
             groupBox1.Controls.Add(button4);
             groupBox1.Controls.Add(button3);
@@ -50,6 +52,16 @@
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "Tipos de Alerta em C#";
+            // 
+            // btnVoltar
+            // 
+            btnVoltar.Location = new Point(317, 224);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(94, 29);
+            btnVoltar.TabIndex = 5;
+            btnVoltar.Text = "Voltar";
+            btnVoltar.UseVisualStyleBackColor = true;
+            btnVoltar.Click += btnVoltar_Click;
             // 
             // button5
             // 
@@ -135,5 +147,6 @@
         private Button button3;
         private Button button2;
         private Button button1;
+        private Button btnVoltar;
     }
 }

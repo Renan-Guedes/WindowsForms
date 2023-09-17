@@ -1,3 +1,5 @@
+using WindowsForm.Forms;
+
 namespace WindowsForm
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace WindowsForm
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormAlerts());
+            Application.Run(new FormMenu());
         }
     }
 }

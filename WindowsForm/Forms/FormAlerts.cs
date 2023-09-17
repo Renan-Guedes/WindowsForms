@@ -41,5 +41,10 @@ namespace WindowsForm
         {
             MessageBox.Show("Ouviu o som do sistema?", "Título da Mensagem", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
