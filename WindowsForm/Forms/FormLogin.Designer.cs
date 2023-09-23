@@ -48,7 +48,7 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(437, 277);
+            groupBox1.Size = new Size(452, 277);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Formulário de Login";
@@ -58,7 +58,7 @@
             btnEntrar.Cursor = Cursors.Hand;
             btnEntrar.Location = new Point(323, 231);
             btnEntrar.Name = "btnEntrar";
-            btnEntrar.Size = new Size(94, 29);
+            btnEntrar.Size = new Size(109, 29);
             btnEntrar.TabIndex = 5;
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@
             btnVoltar.Cursor = Cursors.Hand;
             btnVoltar.Location = new Point(213, 231);
             btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new Size(94, 29);
+            btnVoltar.Size = new Size(109, 29);
             btnVoltar.TabIndex = 4;
             btnVoltar.Text = "Voltar";
             btnVoltar.UseVisualStyleBackColor = true;
@@ -82,7 +82,7 @@
             txtSenha.MaxLength = 50;
             txtSenha.Name = "txtSenha";
             txtSenha.PlaceholderText = "Senha correta: \"123\"";
-            txtSenha.Size = new Size(402, 27);
+            txtSenha.Size = new Size(417, 27);
             txtSenha.TabIndex = 3;
             txtSenha.UseSystemPasswordChar = true;
             txtSenha.Enter += txtSenha_Enter;
@@ -95,7 +95,7 @@
             txtUsuario.MaxLength = 50;
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Usuário correto: \"admin\"";
-            txtUsuario.Size = new Size(402, 27);
+            txtUsuario.Size = new Size(417, 27);
             txtUsuario.TabIndex = 2;
             txtUsuario.Enter += txtUsuario_Enter;
             txtUsuario.KeyPress += txtUsuario_KeyPress;
@@ -123,7 +123,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(461, 301);
+            ClientSize = new Size(476, 301);
             Controls.Add(groupBox1);
             MaximizeBox = false;
             MinimizeBox = false;

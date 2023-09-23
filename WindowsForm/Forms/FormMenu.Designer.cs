@@ -35,6 +35,8 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            consumoDeAPIToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -42,10 +44,10 @@
             // 
             menuStrip1.BackColor = SystemColors.ButtonFace;
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { MenuAlertas, MenuLogin, sairToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { MenuAlertas, MenuLogin, consumoDeAPIToolStripMenuItem, toolStripMenuItem1, sairToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(461, 28);
+            menuStrip1.Size = new Size(476, 28);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -100,11 +102,24 @@
             label3.TabIndex = 3;
             label3.Text = "Para continuar, basta acessar as opções do menu acima";
             // 
+            // consumoDeAPIToolStripMenuItem
+            // 
+            consumoDeAPIToolStripMenuItem.Name = "consumoDeAPIToolStripMenuItem";
+            consumoDeAPIToolStripMenuItem.Size = new Size(45, 24);
+            consumoDeAPIToolStripMenuItem.Text = "API";
+            consumoDeAPIToolStripMenuItem.Click += consumoDeAPIToolStripMenuItem_Click;
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(132, 24);
+            toolStripMenuItem1.Text = "Banco de Dados";
+            // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(461, 301);
+            ClientSize = new Size(476, 301);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -130,5 +145,7 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private ToolStripMenuItem consumoDeAPIToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItem1;
     }
 }

@@ -22,7 +22,7 @@ namespace WindowsForm.Forms
             FormAlerts formAlerts = new FormAlerts();
             formAlerts.ShowDialog();
         }
-        
+
         private void MenuLogin_Click(object sender, EventArgs e)
         {
             FormLogin formLogin = new FormLogin();
@@ -34,5 +34,10 @@ namespace WindowsForm.Forms
             this.Close();
         }
 
+        private void consumoDeAPIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAPI formAPI = new FormAPI();
+            formAPI.ShowDialog();
+        }
     }
 }

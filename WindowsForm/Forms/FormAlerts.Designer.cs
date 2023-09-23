@@ -48,16 +48,17 @@
             groupBox1.Controls.Add(button1);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(436, 271);
+            groupBox1.Size = new Size(452, 277);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "Tipos de Alerta em C#";
             // 
             // btnVoltar
             // 
+            btnVoltar.Cursor = Cursors.Hand;
             btnVoltar.Location = new Point(317, 224);
             btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new Size(94, 29);
+            btnVoltar.Size = new Size(110, 35);
             btnVoltar.TabIndex = 5;
             btnVoltar.Text = "Voltar";
             btnVoltar.UseVisualStyleBackColor = true;
@@ -127,7 +128,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(461, 301);
+            ClientSize = new Size(476, 301);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
