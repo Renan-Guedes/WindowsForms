@@ -31,12 +31,14 @@
             menuStrip1 = new MenuStrip();
             MenuAlertas = new ToolStripMenuItem();
             MenuLogin = new ToolStripMenuItem();
+            consumoDeAPIToolStripMenuItem = new ToolStripMenuItem();
+            aPICom1ObjetoToolStripMenuItem = new ToolStripMenuItem();
+            aPIComListaDeObjetosToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            consumoDeAPIToolStripMenuItem = new ToolStripMenuItem();
-            toolStripMenuItem1 = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -65,6 +67,33 @@
             MenuLogin.Text = "Tela de Login";
             MenuLogin.Click += MenuLogin_Click;
             // 
+            // consumoDeAPIToolStripMenuItem
+            // 
+            consumoDeAPIToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aPICom1ObjetoToolStripMenuItem, aPIComListaDeObjetosToolStripMenuItem });
+            consumoDeAPIToolStripMenuItem.Name = "consumoDeAPIToolStripMenuItem";
+            consumoDeAPIToolStripMenuItem.Size = new Size(45, 24);
+            consumoDeAPIToolStripMenuItem.Text = "API";
+            // 
+            // aPICom1ObjetoToolStripMenuItem
+            // 
+            aPICom1ObjetoToolStripMenuItem.Name = "aPICom1ObjetoToolStripMenuItem";
+            aPICom1ObjetoToolStripMenuItem.Size = new Size(291, 26);
+            aPICom1ObjetoToolStripMenuItem.Text = "API com 1 Objeto";
+            aPICom1ObjetoToolStripMenuItem.Click += aPICom1ObjetoToolStripMenuItem_Click;
+            // 
+            // aPIComListaDeObjetosToolStripMenuItem
+            // 
+            aPIComListaDeObjetosToolStripMenuItem.Name = "aPIComListaDeObjetosToolStripMenuItem";
+            aPIComListaDeObjetosToolStripMenuItem.Size = new Size(291, 26);
+            aPIComListaDeObjetosToolStripMenuItem.Text = "API com uma Lista de Objetos";
+            aPIComListaDeObjetosToolStripMenuItem.Click += aPIComListaDeObjetosToolStripMenuItem_Click;
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(132, 24);
+            toolStripMenuItem1.Text = "Banco de Dados";
+            // 
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
@@ -76,7 +105,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(25, 76);
+            label1.Location = new Point(47, 76);
             label1.Name = "label1";
             label1.Size = new Size(390, 20);
             label1.TabIndex = 1;
@@ -86,7 +115,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(219, 143);
+            label2.Location = new Point(231, 148);
             label2.Name = "label2";
             label2.Size = new Size(23, 20);
             label2.TabIndex = 2;
@@ -96,24 +125,11 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(40, 215);
+            label3.Location = new Point(47, 219);
             label3.Name = "label3";
             label3.Size = new Size(375, 20);
             label3.TabIndex = 3;
             label3.Text = "Para continuar, basta acessar as opções do menu acima";
-            // 
-            // consumoDeAPIToolStripMenuItem
-            // 
-            consumoDeAPIToolStripMenuItem.Name = "consumoDeAPIToolStripMenuItem";
-            consumoDeAPIToolStripMenuItem.Size = new Size(45, 24);
-            consumoDeAPIToolStripMenuItem.Text = "API";
-            consumoDeAPIToolStripMenuItem.Click += consumoDeAPIToolStripMenuItem_Click;
-            // 
-            // toolStripMenuItem1
-            // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(132, 24);
-            toolStripMenuItem1.Text = "Banco de Dados";
             // 
             // FormMenu
             // 
@@ -147,5 +163,7 @@
         private Label label3;
         private ToolStripMenuItem consumoDeAPIToolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem aPICom1ObjetoToolStripMenuItem;
+        private ToolStripMenuItem aPIComListaDeObjetosToolStripMenuItem;
     }
 }

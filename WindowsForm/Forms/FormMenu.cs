@@ -29,15 +29,21 @@ namespace WindowsForm.Forms
             formLogin.ShowDialog();
         }
 
+        private void aPICom1ObjetoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAPI formAPI = new FormAPI();
+            formAPI.ShowDialog();
+        }
+
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void consumoDeAPIToolStripMenuItem_Click(object sender, EventArgs e)
+        private void aPIComListaDeObjetosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormAPI formAPI = new FormAPI();
-            formAPI.ShowDialog();
+            FormAPIObject formAPIObject = new FormAPIObject();
+            formAPIObject.ShowDialog();
         }
     }
 }
