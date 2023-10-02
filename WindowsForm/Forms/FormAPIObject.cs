@@ -13,31 +13,44 @@ namespace WindowsForm.Forms
 {
     public partial class FormAPIObject : Form
     {
-        public FormAPIObject()
+        private FormMenu formMenu;
+
+        public FormAPIObject(FormMenu formMenu)
         {
             InitializeComponent();
+
+            this.formMenu = formMenu;
         }
 
-        string strUrl = "https://jsonplaceholder.typicode.com/todos/";
+        string strURL = "https://jsonplaceholder.typicode.com/todos/";
 
-        private async void btnListar_Click(object sender, EventArgs e)
+        private async void btnConsultar_Click(object sender, EventArgs e)
         {
             try
             {
                 ConsultaUsers consultaUsers = new ConsultaUsers();
-                var resultadoConsulta = await consultaUsers.RealizaConsulta(this.strUrl);
+                var resultadoConsulta = await consultaUsers.RealizaConsulta(this.strURL);
 
-                listBox.Items.Clear();
+                listBox1.Items.Clear();
 
                 foreach (var user in resultadoConsulta)
                 {
-                    listBox.Items.Add($"{user.Id} - {user.Title}");
+                    listBox1.Items.Add($"{user.Id} - {user.Title}");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Algo deu errado!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnVoltar_Click_1(object sender, EventArgs e)
+        {
+            // Exibe o formulário principal (FormMenu)
+            formMenu.Show();
+
+            // Fecha o FormAlerts
+            this.Close();
         }
     }
 }

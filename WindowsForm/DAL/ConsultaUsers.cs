@@ -10,13 +10,13 @@ namespace WindowsForm.DAL
 {
     public class ConsultaUsers
     {
-        public async Task<ListDataUsersItems> RealizaConsulta(string strUrl)
+        public async Task<ListDataUsersItems> RealizaConsulta(string strURL)
         {
             var listusers = new ListDataUsersItems();
 
             using(HttpClient client = new HttpClient()) 
             {
-                var response = await client.GetAsync(strUrl);
+                var response = await client.GetAsync(strURL);
 
                 if (response.IsSuccessStatusCode == true)
                 {

@@ -28,142 +28,119 @@
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip1 = new MenuStrip();
-            MenuAlertas = new ToolStripMenuItem();
-            MenuLogin = new ToolStripMenuItem();
-            consumoDeAPIToolStripMenuItem = new ToolStripMenuItem();
-            aPICom1ObjetoToolStripMenuItem = new ToolStripMenuItem();
-            aPIComListaDeObjetosToolStripMenuItem = new ToolStripMenuItem();
-            toolStripMenuItem1 = new ToolStripMenuItem();
-            sairToolStripMenuItem = new ToolStripMenuItem();
+            label4 = new Label();
+            btnLogin = new Button();
+            btnAPI1 = new Button();
+            btnAPI2 = new Button();
+            lblSair = new Label();
             label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // menuStrip1
+            // label4
             // 
-            menuStrip1.BackColor = SystemColors.ButtonFace;
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { MenuAlertas, MenuLogin, consumoDeAPIToolStripMenuItem, toolStripMenuItem1, sairToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(476, 28);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.HotTrack;
+            label4.Location = new Point(253, 9);
+            label4.Name = "label4";
+            label4.Size = new Size(116, 38);
+            label4.TabIndex = 4;
+            label4.Text = "Revisão";
             // 
-            // MenuAlertas
+            // btnLogin
             // 
-            MenuAlertas.Name = "MenuAlertas";
-            MenuAlertas.Size = new Size(121, 24);
-            MenuAlertas.Text = "Tela de Alertas";
-            MenuAlertas.Click += MenuAlertas_Click;
+            btnLogin.BackColor = SystemColors.HotTrack;
+            btnLogin.Cursor = Cursors.Hand;
+            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.ForeColor = SystemColors.Control;
+            btnLogin.Location = new Point(181, 121);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(239, 41);
+            btnLogin.TabIndex = 5;
+            btnLogin.Text = "Tela de Login";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
-            // MenuLogin
+            // btnAPI1
             // 
-            MenuLogin.Name = "MenuLogin";
-            MenuLogin.Size = new Size(112, 24);
-            MenuLogin.Text = "Tela de Login";
-            MenuLogin.Click += MenuLogin_Click;
+            btnAPI1.BackColor = Color.White;
+            btnAPI1.Cursor = Cursors.Hand;
+            btnAPI1.FlatStyle = FlatStyle.Flat;
+            btnAPI1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAPI1.ForeColor = SystemColors.HotTrack;
+            btnAPI1.Location = new Point(30, 208);
+            btnAPI1.Name = "btnAPI1";
+            btnAPI1.Size = new Size(238, 41);
+            btnAPI1.TabIndex = 6;
+            btnAPI1.Text = "API com 1 Objeto";
+            btnAPI1.UseVisualStyleBackColor = false;
+            btnAPI1.Click += btnAPI1_Click;
             // 
-            // consumoDeAPIToolStripMenuItem
+            // btnAPI2
             // 
-            consumoDeAPIToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aPICom1ObjetoToolStripMenuItem, aPIComListaDeObjetosToolStripMenuItem });
-            consumoDeAPIToolStripMenuItem.Name = "consumoDeAPIToolStripMenuItem";
-            consumoDeAPIToolStripMenuItem.Size = new Size(45, 24);
-            consumoDeAPIToolStripMenuItem.Text = "API";
+            btnAPI2.BackColor = Color.White;
+            btnAPI2.Cursor = Cursors.Hand;
+            btnAPI2.FlatStyle = FlatStyle.Flat;
+            btnAPI2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAPI2.ForeColor = SystemColors.HotTrack;
+            btnAPI2.Location = new Point(332, 208);
+            btnAPI2.Name = "btnAPI2";
+            btnAPI2.Size = new Size(238, 41);
+            btnAPI2.TabIndex = 7;
+            btnAPI2.Text = "API com uma Lista de Objetos";
+            btnAPI2.UseVisualStyleBackColor = false;
+            btnAPI2.Click += btnAPI2_Click;
             // 
-            // aPICom1ObjetoToolStripMenuItem
+            // lblSair
             // 
-            aPICom1ObjetoToolStripMenuItem.Name = "aPICom1ObjetoToolStripMenuItem";
-            aPICom1ObjetoToolStripMenuItem.Size = new Size(291, 26);
-            aPICom1ObjetoToolStripMenuItem.Text = "API com 1 Objeto";
-            aPICom1ObjetoToolStripMenuItem.Click += aPICom1ObjetoToolStripMenuItem_Click;
-            // 
-            // aPIComListaDeObjetosToolStripMenuItem
-            // 
-            aPIComListaDeObjetosToolStripMenuItem.Name = "aPIComListaDeObjetosToolStripMenuItem";
-            aPIComListaDeObjetosToolStripMenuItem.Size = new Size(291, 26);
-            aPIComListaDeObjetosToolStripMenuItem.Text = "API com uma Lista de Objetos";
-            aPIComListaDeObjetosToolStripMenuItem.Click += aPIComListaDeObjetosToolStripMenuItem_Click;
-            // 
-            // toolStripMenuItem1
-            // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(132, 24);
-            toolStripMenuItem1.Text = "Banco de Dados";
-            // 
-            // sairToolStripMenuItem
-            // 
-            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(48, 24);
-            sairToolStripMenuItem.Text = "Sair";
-            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
+            lblSair.AutoSize = true;
+            lblSair.Cursor = Cursors.Hand;
+            lblSair.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSair.ForeColor = SystemColors.HotTrack;
+            lblSair.Location = new Point(278, 308);
+            lblSair.Name = "lblSair";
+            lblSair.Size = new Size(41, 23);
+            lblSair.TabIndex = 8;
+            lblSair.Text = "Sair";
+            lblSair.Click += lblSair_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(47, 76);
+            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ControlDarkDark;
+            label1.Location = new Point(48, 56);
             label1.Name = "label1";
-            label1.Size = new Size(390, 20);
-            label1.TabIndex = 1;
-            label1.Text = "Olá! Bem vindo (a) ao meu resumo sobre Windows Forms";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(231, 148);
-            label2.Name = "label2";
-            label2.Size = new Size(23, 20);
-            label2.TabIndex = 2;
-            label2.Text = ":D";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(47, 219);
-            label3.Name = "label3";
-            label3.Size = new Size(375, 20);
-            label3.TabIndex = 3;
-            label3.Text = "Para continuar, basta acessar as opções do menu acima";
+            label1.Size = new Size(521, 25);
+            label1.TabIndex = 10;
+            label1.Text = "Explorando Windows Forms: Um Resumo por Renan Guedes";
             // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(476, 301);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            ClientSize = new Size(613, 368);
+            ControlBox = false;
             Controls.Add(label1);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
+            Controls.Add(lblSair);
+            Controls.Add(btnAPI2);
+            Controls.Add(btnAPI1);
+            Controls.Add(btnLogin);
+            Controls.Add(label4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormMenu";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Estudo de Formulários";
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem MenuAlertas;
-        private ToolStripMenuItem MenuLogin;
-        private ToolStripMenuItem sairToolStripMenuItem;
+        private Label label4;
+        private Button btnLogin;
+        private Button btnAPI1;
+        private Button btnAPI2;
+        private Label lblSair;
         private Label label1;
-        private Label label2;
-        private Label label3;
-        private ToolStripMenuItem consumoDeAPIToolStripMenuItem;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem aPICom1ObjetoToolStripMenuItem;
-        private ToolStripMenuItem aPIComListaDeObjetosToolStripMenuItem;
     }
 }

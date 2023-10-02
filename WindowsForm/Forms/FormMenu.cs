@@ -17,33 +17,37 @@ namespace WindowsForm.Forms
             InitializeComponent();
         }
 
-        private void MenuAlertas_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            FormAlerts formAlerts = new FormAlerts();
-            formAlerts.ShowDialog();
+            FormLogin formLogin = new FormLogin(this);
+            formLogin.Show();
+
+            // Esconde o Menu
+            this.Hide();
         }
 
-        private void MenuLogin_Click(object sender, EventArgs e)
+        private void btnAPI1_Click(object sender, EventArgs e)
         {
-            FormLogin formLogin = new FormLogin();
-            formLogin.ShowDialog();
+            FormAPI formAPI = new FormAPI(this);
+            formAPI.Show();
+
+            // Esconde o Menu
+            this.Hide();
         }
 
-        private void aPICom1ObjetoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnAPI2_Click(object sender, EventArgs e)
         {
-            FormAPI formAPI = new FormAPI();
-            formAPI.ShowDialog();
+            FormAPIObject formAPIObject = new FormAPIObject(this);
+            formAPIObject.Show();
+
+            // Esconde o Menu
+            this.Hide();
         }
 
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        private void lblSair_Click(object sender, EventArgs e)
         {
+            // Fecha o programa
             this.Close();
-        }
-
-        private void aPIComListaDeObjetosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormAPIObject formAPIObject = new FormAPIObject();
-            formAPIObject.ShowDialog();
         }
     }
 }

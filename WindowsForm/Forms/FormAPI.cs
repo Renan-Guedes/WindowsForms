@@ -17,9 +17,14 @@ namespace WindowsForm.Forms
 {
     public partial class FormAPI : Form
     {
-        public FormAPI()
+
+        private FormMenu formMenu;
+
+        public FormAPI(FormMenu formMenu)
         {
             InitializeComponent();
+
+            this.formMenu = formMenu;
         }
 
         string strURL = "https://economia.awesomeapi.com.br/last/USD-BRL";
@@ -33,6 +38,15 @@ namespace WindowsForm.Forms
             lblCompra.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", resultadoConsulta.Data.Compra);
             lblVenda.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", resultadoConsulta.Data.Venda);
             lblVariacao.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:P}", resultadoConsulta.Data.PctVariacao);
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            // Exibe o formulário principal (FormMenu)
+            formMenu.Show();
+
+            // Fecha o FormAlerts
+            this.Close();
         }
     }
 }

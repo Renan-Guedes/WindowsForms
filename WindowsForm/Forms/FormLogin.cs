@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,85 +13,88 @@ namespace WindowsForm.Forms
 {
     public partial class FormLogin : Form
     {
-        public FormLogin()
+        private FormMenu formMenu;
+
+        public FormLogin(FormMenu formMenu)
         {
             InitializeComponent();
+
+            this.formMenu = formMenu;
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            // Informa ao usuário qual o Login e a Senha antes de iniciar o formulário
-            MessageBox.Show("Login: admin\nSenha: 123", "Informações sobre o Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void btnEntrar_Click(object sender, EventArgs e)
-        {
-            try
+            // Confere se todos os campos foram preenchidos
+            if (txtUsuario.Text == "" || txtSenha.Text == "")
             {
-                // Verifica se o login está correto
-                if (txtUsuario.Text.Equals("admin") && txtSenha.Text.Equals("123"))
+                MessageBox.Show("Preencha todos os campos!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
                 {
-                    MessageBox.Show("Você conseguiu passar :D", "Parabéns!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var strConexao = "server=localhost;uid=root;database=meubd";
+
+                    var conexao = new MySqlConnection(strConexao);
+                    conexao.Open();
+
+                    var comando = new MySqlCommand($"SELECT * FROM cadastro WHERE cadastro.login = '{txtUsuario.Text}' AND cadastro.senha = '{txtSenha.Text}'", conexao);
+                    var reader = comando.ExecuteReader();
+
+                    if (reader.Read() == true)
+                    {
+                        MessageBox.Show("Login e Senha Corretos!", "Você conseguiu!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtUsuario.Text = "";
+                        txtSenha.Text = "";
+                        txtUsuario.Focus();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Email e/ou senha informados são inválidos", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtUsuario.Text = "";
+                        txtSenha.Text = "";
+                        txtUsuario.Focus();
+                    }
+
+                    conexao.Close();
+
                 }
-                // Verifica se não algum campo não foi preenchido
-                else if (txtUsuario.Text.Equals("") || txtSenha.Text.Equals(""))
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Preencha todos os campos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtSenha.Text = "";
-                }
-                // Informa ao usuário caso os campos não estejam corretos
-                else
-                {
-                    MessageBox.Show("Usuário ou senha incorretos", "Desculpe", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtSenha.Text = "";
-                    txtSenha.Focus();
+                    MessageBox.Show(ex.Message, "Ocorreu um erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Desculpe", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+        }
+        private void btnApagar_Click(object sender, EventArgs e)
+        {
+            txtUsuario.Text = "";
+            txtSenha.Text = "";
+            txtUsuario.Focus();
         }
 
-        private void btnVoltar_Click(object sender, EventArgs e)
+        private void lblCriarConta_Click(object sender, EventArgs e)
         {
+            FormCadastro formCadastro = new FormCadastro(this);
+            formCadastro.Show();
+
+            this.Hide();
+        }
+
+        private void lblVoltar_Click(object sender, EventArgs e)
+        {
+            formMenu.Show();
             this.Close();
         }
 
-        private void txtUsuario_Enter(object sender, EventArgs e)
+        private void checkBoxMostrar_CheckedChanged(object sender, EventArgs e)
         {
-            // Troca a cor do campo quando Usuário está clicado
-            txtUsuario.BackColor = Color.LightYellow;
-        }
-
-        private void txtUsuario_Leave(object sender, EventArgs e)
-        {
-            // Troca a cor do campo quando Usuário deixa de ser clicado
-            txtUsuario.BackColor = Color.White;
-        }
-
-        private void txtSenha_Enter(object sender, EventArgs e)
-        {
-            // Troca a cor do campo quando Senha está clicado
-            txtSenha.BackColor = Color.LightYellow;
-        }
-
-        private void txtSenha_Leave(object sender, EventArgs e)
-        {
-            // Troca a cor do campo quando Senha deixa de ser clicado
-            txtSenha.BackColor = Color.White;
-        }
-
-        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            int tecla = (int)e.KeyChar;
-
-            // Limita o que é escrito no campo Usuário para apenas letras e números 
-            if (!char.IsLetterOrDigit(e.KeyChar) && tecla != 08)
+            if (checkBoxMostrar.Checked)
             {
-                e.Handled = true;
-                MessageBox.Show("Digite apenas letras ou números", "Ops", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtUsuario.Focus();
+                txtSenha.PasswordChar = '\0';
+            }
+            else
+            {
+                txtSenha.PasswordChar = '*';
             }
         }
     }
