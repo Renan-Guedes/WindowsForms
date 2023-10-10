@@ -49,7 +49,7 @@
             txtUsuario.Multiline = true;
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(239, 35);
-            txtUsuario.TabIndex = 27;
+            txtUsuario.TabIndex = 1;
             // 
             // txtSenha
             // 
@@ -60,7 +60,7 @@
             txtSenha.Name = "txtSenha";
             txtSenha.PasswordChar = '*';
             txtSenha.Size = new Size(239, 35);
-            txtSenha.TabIndex = 25;
+            txtSenha.TabIndex = 2;
             // 
             // label3
             // 
@@ -83,7 +83,7 @@
             btnApagar.Location = new Point(59, 420);
             btnApagar.Name = "btnApagar";
             btnApagar.Size = new Size(238, 41);
-            btnApagar.TabIndex = 22;
+            btnApagar.TabIndex = 6;
             btnApagar.Text = "Apagar todos os campos";
             btnApagar.UseVisualStyleBackColor = false;
             btnApagar.Click += btnApagar_Click;
@@ -97,7 +97,7 @@
             btnCadastrar.Location = new Point(58, 363);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(239, 41);
-            btnCadastrar.TabIndex = 21;
+            btnCadastrar.TabIndex = 5;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = false;
             btnCadastrar.Click += btnCadastrar_Click;
@@ -108,7 +108,7 @@
             checkBoxMostrar.Location = new Point(160, 310);
             checkBoxMostrar.Name = "checkBoxMostrar";
             checkBoxMostrar.Size = new Size(138, 24);
-            checkBoxMostrar.TabIndex = 20;
+            checkBoxMostrar.TabIndex = 4;
             checkBoxMostrar.Text = "Mostrar a Senha";
             checkBoxMostrar.UseVisualStyleBackColor = true;
             checkBoxMostrar.CheckedChanged += checkBoxMostrar_CheckedChanged;
@@ -144,7 +144,7 @@
             txtConfirme.Name = "txtConfirme";
             txtConfirme.PasswordChar = '*';
             txtConfirme.Size = new Size(239, 35);
-            txtConfirme.TabIndex = 30;
+            txtConfirme.TabIndex = 3;
             // 
             // label4
             // 
@@ -166,7 +166,7 @@
             lblRetornar.Location = new Point(76, 485);
             lblRetornar.Name = "lblRetornar";
             lblRetornar.Size = new Size(212, 20);
-            lblRetornar.TabIndex = 31;
+            lblRetornar.TabIndex = 7;
             lblRetornar.Text = "Retornar para a tela de Login";
             lblRetornar.Click += lblRetornar_Click;
             // 

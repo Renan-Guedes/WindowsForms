@@ -45,7 +45,7 @@ namespace WindowsForm.Forms
             // Exibe o formulário principal (FormMenu)
             formMenu.Show();
 
-            // Fecha o FormAlerts
+            // Fecha o Formulário atual
             this.Close();
         }
     }

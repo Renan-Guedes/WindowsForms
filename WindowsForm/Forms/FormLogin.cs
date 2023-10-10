@@ -43,15 +43,14 @@ namespace WindowsForm.Forms
 
                     if (reader.Read() == true)
                     {
-                        MessageBox.Show("Login e Senha Corretos!", "Você conseguiu!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("O Usuário e a Senha estão Corretos!", "Você conseguiu!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtUsuario.Text = "";
                         txtSenha.Text = "";
                         txtUsuario.Focus();
                     }
                     else
                     {
-                        MessageBox.Show("Email e/ou senha informados são inválidos", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtUsuario.Text = "";
+                        MessageBox.Show("Usuário e/ou senha informados são inválidos", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         txtSenha.Text = "";
                         txtUsuario.Focus();
                     }
